@@ -1,0 +1,227 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* padding won't contribute to box width */
+}
+
+/* Main Styling */
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    padding-bottom: 20px; /* added because default padding was removed in reset */
+}
+
+p {
+    margin: 10px 0; /* added because default margin was removed in reset */
+} 
+
+/* Utility Classes */
+/* container is added to navbar to push content to the middle and keep bg width 100% */
+/* container is added to showcase so bg image isn't restricted but content is max 1100px */
+.container {
+    margin: auto;
+    max-width: 1100px;
+    overflow: auto;
+    padding: 0 20px;
+}
+
+.text-primary {
+    color: #f7c08a;
+}
+
+.lead {
+    font-size: 20px; /* paragraph in showcase section */
+}
+
+.btn {
+    display: inline-block;
+    font-size: 18px;
+    background: #333;
+    color: #fff;
+    padding: 13px 20px;
+    border: none;
+    cursor: pointer; /* links have pointers, buttons don't, added so class can be used in buttons and have pointers. */
+}
+
+.btn:hover {
+    background: #f7c08a;
+    color: #333;
+}
+
+.btn-light {
+    background: #f4f4f4;
+    color: #333;
+}
+
+.bg-dark {
+    background: #333;
+    color: #fff;
+}
+
+.bg-light {
+    background: #f4f4f4;
+    color: #333;
+}
+
+.bg-primary {
+    background: #f7c08a;
+    color: #333;
+}
+
+.clr {
+    clear: both;
+}
+
+.large-heading {
+    font-size: 40px;
+}
+
+/* Padding */
+/* py name for padding on the y-axis */
+.py-1 {padding: 10px 0px;}
+.py-2 {padding: 20px 0px;}
+.py-3 {padding: 30px 0px;}
+
+/* Navbar */  
+#navbar {
+    background-color: #333;
+    color: #fff;
+    overflow: auto; /* background shows, no matter what */
+}
+
+#navbar a {
+    color: #fff; /* changes links in navbar to white */
+}
+
+#navbar h1 {
+    float: left;
+    padding-top: 20px;
+}
+
+#navbar ul {
+    float: right;
+    list-style: none; /* removes bullet points */
+}
+
+#navbar ul li {
+    float: left; /* changes list items from vertical to horizontal */
+}
+
+#navbar ul li a {
+    display: block; /* content starts on a new line, and takes up the whole width */
+    padding: 20px;
+    text-align: center;
+}
+
+#navbar ul li a:hover, 
+#navbar ul li a.active {
+    background-color: #444;
+    color: #f7c08a;
+}
+
+/* Showcase */
+#showcase {
+    background: url('../images/showcase.jpg') no-repeat center center/cover; /* .. brings you outside the css folder and into the images folder */
+    height: 600px;
+}
+
+#showcase .showcase-content {
+    color: #fff;
+    text-align: center;
+    padding-top: 170px;
+}
+
+#showcase .showcase-content h1 {
+    font-size: 60px;
+    line-height: 1.2em;
+}
+
+#showcase .showcase-content p {
+    padding-bottom: 20px;
+    line-height: 1.7em;
+}
+
+/* Home Info */
+#home-info {
+    height: 400px;
+}
+
+#home-info .info-img {
+    float: left;
+    width: 50%;
+    background: url('../images/photo-1.jpg') no-repeat;
+    min-height: 100%;
+}
+
+#home-info .info-content {
+    float: right;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    padding: 50px 30px;
+    overflow: hidden;
+}
+
+#home-info .info-content p {
+    padding-bottom: 30px;
+}
+
+/* Features */
+.box {
+    float: left;
+    width: 33.3%;
+    padding: 50px;
+    text-align: center;
+}
+
+.box i {
+    margin-bottom: 10px;
+}
+
+/* About Info */
+#about-info .info-left {
+    float: left;
+    width: 50%;
+    min-height: 100%;
+}
+
+#about-info .info-right {
+    float: right;
+    width: 50%;
+    min-height: 100%;
+}
+
+#about-info .info-right img {
+    display: block; /* block so margin auto can be added */
+    margin: auto;
+    width: 70%;
+    border-radius: 50%;
+}
+
+/* Testimonials */
+#testimonials {
+    height: 600px;
+    background: url(../images/test-bg.jpg) no-repeat center center/cover;
+    padding-top: 40px;
+}
+
+#testimonials .testimonial img {
+    width: 100px;
+}
+
+/* Footer */
+#main-footer {
+    text-align: center;
+    padding: 20px;
+    background: #444;
+    color: #fff;
+}
