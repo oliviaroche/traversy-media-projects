@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+    box-sizing: border-box; /* padding won't contribute to box width */
+}
+
+body {
+    background: #224941 url('./img/bg.jpeg') no-repeat center center/cover;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* aligns content to center on x,y axis */
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    position: relative; /* circle will be absolute within the container */
+    transform: scale(1); /* used to grow/shrrink container */
+}
+
+.gradient-circle {
+    background: conic-gradient(
+        #55b7a4 0%,
+        #4ca493 40%,
+        #fff 40%,
+        #fff 60%,
+        #336d62 60%,
+        #2a5b52 100%
+  );
+    height: 320px;
+    width: 320px;
+    position: absolute;
+    top: -10px;
+    left: -10px; /* directly behind the other circle, not in the same position */
+    z-index: -2; /* pushes behind solid circle */
+    border-radius: 50%;
+} 
+
+.circle {
+    background-color: #010f1c;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px; /* positioned in the center over the gradient circle */
+    z-index: -1; /* in front of gradient circle */
+    border-radius: 50%;
+    border-radius: 50%;
+}
+
+.pointer-container {
+    position: absolute;
+    top: -40px;
+    left: 140px;
+    width: 20px;
+    height: 190px;
+    /* background-color: aqua; */
+    animation: rotate 7.5s linear forwards infinite;
+    transform-origin: bottom center; /* pointer rotates like a clock */
+}
+
+.pointer {
+    background-color: #fff;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: block;
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+.container.grow {
+    animation: grow 3s linear forwards;
+  }
+  
+  @keyframes grow {
+    from {
+      transform: scale(1);
+    }
+  
+    to {
+      transform: scale(1.2);
+    }
+  }
+  
+.container.shrink {
+    animation: shrink 3s linear forwards;
+  }
+  
+  @keyframes shrink {
+    from {
+      transform: scale(1.2);
+    }
+  
+    to {
+      transform: scale(1);
+    }
+  }
