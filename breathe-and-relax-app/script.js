@@ -1,4 +1,4 @@
-const container = document.getElementsByClassName('container');
+const container = document.getElementsByClassName('container')[0];
 const text = document.getElementById('text');
 
 const totalTime = 7500; // 7.5s
@@ -10,7 +10,7 @@ breatheAnimation();
 // conatiner grows during 'breathe in' and shrinks during 'breathe out'
 function breatheAnimation() {
     text.innerHTML = 'Breathe In';
-    container.className = 'conatiner grow';
+    container.className = 'container grow';
 
     // waits amount of breatheTime/holdTime before executing function which changes text
     // waits 3s before changng inner circle text from 'Breathe In' to 'Hold'
